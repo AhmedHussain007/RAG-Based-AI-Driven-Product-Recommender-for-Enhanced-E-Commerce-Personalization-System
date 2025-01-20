@@ -1,0 +1,79 @@
+<tml>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/CSS_files/login-form.css">
+        <script src="/static/JS_files/login-form.js"></script>
+    </head>
+    <body style="background-image:url('Images/login-background.jpg');background-size: cover;">
+        <div class="container">
+            <div class="container form bg-white pt-5 mt-4 mb-3">
+                <p class="text-center login-heading hide-me">login</p>
+                <div class="container hide-me">
+                    <form method = "POST" action="{% url 'log-in-page' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col mt-4 pl-5 pr-5">
+                                <p class="username">username</p>
+                                <div class="row mt-4">
+                                    <div class="col-2 text-center pt-1 pr-0">
+                                        <i class="fa fa-user-o" aria-hidden="true" id="user"></i>
+                                    </div>
+                                    <div class="col-10 pl-0">
+                                        <input type="text" name="username" placeholder="Type your username" class='input-1' required>
+                                    </div>
+                                </div>
+                                <hr class="hr-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mt-4 pl-5 pr-5">
+                                <p class="username">Password</p>
+                                <div class="row mt-4">
+                                    <div class="col-2 text-center pt-1 pr-0">
+                                        <i class="fa fa-lock" aria-hidden="true" id="lock"></i>
+                                    </div>
+                                    <div class="col-10 pl-0">
+                                        <input type="password" name="password" placeholder="Type your password" class="input-2" required>
+                                    </div>
+                                </div>
+                                <hr class="hr-2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right pr-5">
+                                <a href="#"><span class="forget-password">Forget password?</span></a>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col pl-5 pr-5">
+                                <button type="submit" class="btn btn-block text-white login-button">Login</button>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col text-center">
+                                {% if messages %}
+                                    <div class="alert alert-danger">
+                                        {% for message in messages %}
+                                            <p>{{ message }}</p>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-12 text-center pt-3">
+                                <a href="{% url 'sign-up-page' %}"><span class="sign-up">sign up</span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<style>
+.menu-1{text-transform:uppercase;margin-left:7%;font-weight:bold}
+.menu{text-transform:uppercase;margin-left:5%;font-weight:bold}
+.menu-bar{display:none;padding-right:8%;}
+.profile-icon{height:30px;}
+.logo-2,.side-bar,.close{display:none;}
+.color{color:black;text-decoration: none;}
+.color:hover{color:black;text-decoration: none;}
+.profile-icon::after{content:"hello user";height:10%;width:10%;background-color: firebrick;}
+.pre-profile-1:hover{background-color:rgba(212, 206, 206, 0.993)}
+.menu-bar-1,.close{display:none;}
+.pre-side-bar{list-style:none;text-transform: uppercase;font-weight: 600;font-size:15px;display:none;}
+.menu-bar-2{display: none;}
+.side-bar{display:none;}
+html,body{overflow-x: hidden;overflow-y: auto;scroll-behavior: smooth;transition:1s linear;}
+.sale-img{transform: translateY(10%);padding-left:5%}
+.sift-girl{padding-left:5%;}
+.special{padding-left:3%}
+.girl-image{width:100%;height:250px;border-radius:20px;border:5px solid grey;overflow: hidden;}
+.image-lable{font-size:15px;font-weight:bold;text-transform: uppercase;}
+.img-men{height:250px;width:250px;}
+a:hover{text-decoration: none;color:black}
+a{color:black}
+#change-color{z-index:2;position:fixed;transition: 0.2s linear;}
+.change{position:fixed;z-index:2;opacity:0.9;background-color:rgba(128, 128, 128, 0.596);}
+.font{font-size:22px;margin-left:2%}
+.font-1{font-size:22px}
+.icons-1,.icons,.icons-2,.icons-3{border:1px solid transparent;padding:2% 2.2%;margin-left:2%;border-radius:50px;background-color:rgb(49, 48, 48);}
+.icons-2{padding:2% 3%;}
+.icons-3{padding:2% 2.5%;}
+.icons{padding:2% 2.8%;}
+.icon-head{text-align: end;}
+.logo-sift{margin-top:-7%;margin-bottom:-6%;}
+.sift-couple{padding-left:5%}
+</style>
+<div class="container-fluid text-white" id="change-color">
+    <div class="row" id="top-containt">
+      <div class="col-4 text-center">
+        <a href="ecommerce.html"><img src="/static/Images/shopping-logo.png" height="130px" class="color logo-1 logo-sift"></a>
+        <a href="ecommerce.html"><img src="/static/Images/pinterest_icon.png" height="70px" class=" color logo-2 mt-1 ml-2"></a>
+      </div>
+      <div class="col-8 pt-4 mt-1 text-center">
+        <span class="dropdown dropdown-toggle profile" data-toggle="dropdown" style="color:black" >
+          <a href="#/"><img src="/static/Images/profile-icon.png" class="profile-icon color"></a>
+        </span>
+        <ul class="dropdown-menu mt-4 text-center" style="margin-left:-6%;border-radius:10px;">
+          <li class="pre-profile-1 pt-2 pb-2"><a href="#/" class="color" style="font-weight:600">Help Center </a></li>
+          <li class="pre-profile-1 pt-2 pb-2"><a href="#/" class="color" style="font-weight:600">Order History</a></li>
+          <li class="pre-profile-1 pt-2 pb-2"><a href="#/" class="color" style="font-weight:600">Change Password</a></li>
+          <li class="pre-profile-1 pt-2 pb-2"><a href="#/" class="color" style="font-weight:600">Update Profile</a></li>
+          <li class="pre-profile-1 pt-2 pb-2"><a href="{% url 'log-in-page' %}" class="color" style="font-weight:600">Log In</a></li>
+        </ul>
+        <span class="menu-1"><a href="{% url 'home' %}" class="color">home</a></span>
+        <span class="menu"><a href= "{% url 'products-page' %}" class="color">products</a></span>
+        <span class="menu"><a href=  "{% url 'about-us' %}" class="color">about</a></span>
+        <span class="menu"><a href=  "{% url 'contact-us' %}"class="color">contact</a></span>
+        <span class="menu"><a href=  "{% url 'cart' %}" class="color">cart</a></span>
+        <span class="menu-bar text-right"><a href="#/" class="color">&#9776;</a></span>
+        <span class="menu-bar-1 text-right"><a href="#/" class="color">&#9776;</a></span>
+        <span class="menu-bar-2 text-right"><a href="#/" class="color">&#9776;</a></span>
+      </div>
+    </div>
+    <div class="container-fluid side-bar px-0">
+      <div class="col-12 text-right bg-danger"> 
+        <span class="close"><a href="#/" class="color">&times;</a></span>
+      </div>
+        <ul class="pt-5 pre-side-bar">
+          <li class="pt-4" style="margin-left:-5%;"><a href="eecommercehtml" class="color">home</a></li>
+          <li class="pt-3"style="margin-left:-5%"><a href="ecommerce-price-men.html" class="color">products</a></li>
+          <li class="pt-3"style="margin-left:-5%"><a href="about-us.html#/" class="color">about</a></li>
+          <li class="pt-3"style="margin-left:-5%"><a href="contact-form.html" class="color">contact</a></li>
+          <li class="pt-3"style="margin-left:-5%"><a href="#/" class="color">Update profile</a></li>
+          <li class="pt-3"style="margin-left:-5%"><a href="login-form.html" class="color">log in</a><span><a href="#" class="color"><img src="/static/Images/log-in..png" class="log-in"></a></span></li>
+        </ul>
+    </div>
+  </div>
