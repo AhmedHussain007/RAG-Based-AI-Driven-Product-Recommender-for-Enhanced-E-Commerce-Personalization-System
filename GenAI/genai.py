@@ -27,6 +27,8 @@ def load_data():
     } for product in products])
     return df
 
+
+
 def load_user_clicks(user_id):
     user_clicks = UserProductClick.objects.filter(user__id = user_id)
     user_clicks_df = pd.DataFrame([{
