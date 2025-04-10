@@ -2,6 +2,7 @@
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
+
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -30,6 +31,7 @@ urlpatterns = [
     path('about-us/' , views.About_us , name = 'about-us'),
     path('cart/' , views.Cart , name = 'cart')
 ]
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
